@@ -200,7 +200,7 @@ a {
 
   .nav .list__item:nth-of-type(1) {
     border-radius: 3rem 4px 4px 3px;
-    padding-right: 20vw;
+    padding-right: 25vw;
   }
   
   .hide .list__item:nth-of-type(1) {

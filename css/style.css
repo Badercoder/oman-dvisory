@@ -200,7 +200,8 @@ a {
   .nav .list__item:nth-of-type(1) {
     border-radius: 3rem 4px 4px 3px;
     width: 30%;
-    padding-inline: 1rem 15.75%;
+    padding-inline: 1rem 16%;
+    background: red;
   }
   
   .hide .list__item:nth-of-type(1) {
@@ -211,9 +212,10 @@ a {
     display: block;
     width: fit-content;
     border-radius: 4px 3rem 3px 4px;
-    padding-inline: 15.75% 1rem;
+    padding-inline: 16% 1rem;
     font-weight: 600;
     width: 30%;
+    background: red;
   }
   
   .hide .list__item:nth-of-type(2) {

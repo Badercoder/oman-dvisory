@@ -201,7 +201,6 @@ a {
     border-radius: 3rem 4px 4px 3px;
     width: 30%;
     padding-inline: 1rem 16%;
-    background: red;
   }
   
   .hide .list__item:nth-of-type(1) {
@@ -215,7 +214,6 @@ a {
     padding-inline: 16% 1rem;
     font-weight: 600;
     width: 30%;
-    background: red;
   }
   
   .hide .list__item:nth-of-type(2) {

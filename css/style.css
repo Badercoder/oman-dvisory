@@ -166,7 +166,7 @@ a {
   }
 
   .nav .list__item:nth-of-type(1) {
-    padding: 0.35rem 1.85rem;
+    padding: 0.35rem 2rem;
   }
 
   .nav .list__item:nth-of-type(3) {
@@ -183,7 +183,6 @@ a {
   .nav .grid {
     justify-content: space-between;
     flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr) repeat(4, auto);
   }
 
   .nav .list__item {
@@ -200,7 +199,8 @@ a {
 
   .nav .list__item:nth-of-type(1) {
     border-radius: 3rem 4px 4px 3px;
-    padding-right: 26vw;
+    width: 30%;
+    padding-inline: 1rem 15.75%;
   }
   
   .hide .list__item:nth-of-type(1) {
@@ -211,10 +211,9 @@ a {
     display: block;
     width: fit-content;
     border-radius: 4px 3rem 3px 4px;
-    padding-inline: 3rem;
-    padding-left: 26vw;
+    padding-inline: 15.75% 1rem;
     font-weight: 600;
-    /* width: 100%; */
+    width: 30%;
   }
   
   .hide .list__item:nth-of-type(2) {

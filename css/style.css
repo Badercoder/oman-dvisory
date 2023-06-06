@@ -90,6 +90,7 @@ a {
   padding: 0.25rem;
   box-shadow: 4px 7px var(--color-black);
   border: 1px solid black;
+  z-index: 2;
 }
 
 .nav .grid {
@@ -249,15 +250,15 @@ a {
   border-bottom: 2px solid var(--color-black);
   margin-inline: 20rem;
   height: fit-content;
-  box-shadow: 4px 7px var(--color-black);
   transition: all 0.15s;
   border: 2px solid var(--color-black);
+  font-weight: 400;
+  box-shadow: 1px 1px var(--color-black);
 }
 
 .page-title:hover {
-  font-weight: 400;
-  border: 2px solid var(--color-black);
-  box-shadow: 1px 1px var(--color-black);
+  box-shadow: 4px 7px var(--color-black);
+  font-weight: 600;
 }
 
 .cards {
@@ -273,12 +274,12 @@ a {
   border: 2px solid var(--color-black);
   border-radius: 1rem;
   transition: all 0.2s;
-  box-shadow: 4px 7px var(--color-black);
+  box-shadow: 1px 3px var(--color-black);
 }
 
 .card:hover {
   transform: scale(1.04);
-  box-shadow: 1px 3px var(--color-black);
+  box-shadow: 4px 7px var(--color-black);
 }
 
 @media screen and (max-width: 1024px) {

@@ -258,7 +258,7 @@ a {
 @media screen and (max-width: 550px) {
 
   .nav {
-    margin-inline: 1rem;
+    margin-inline: 0 1rem;
   }
 }
 

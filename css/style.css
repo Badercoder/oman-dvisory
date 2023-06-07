@@ -206,10 +206,11 @@ a {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
 
   .nav {
     margin-right: 6rem;
+    background: red;
   }
 
   .nav .grid {

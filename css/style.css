@@ -206,7 +206,7 @@ a {
   }
 }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 768px) {
 
   .nav {
     margin-right: 6rem;

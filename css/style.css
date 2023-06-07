@@ -341,7 +341,7 @@ a {
 @media screen and (max-width: 450px) {
 
   .card {
-    height: 29rem;
-    width: 29rem;
+    height: 45vh;
+    width: 80vw;
   }
 }

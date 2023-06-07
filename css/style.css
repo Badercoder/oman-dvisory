@@ -4,7 +4,9 @@
   --color-white: #fff;
   --color-gray-1: rgb(90, 90, 90);
   --color-gray-2: rgb(240, 240, 240);
-  --color-purple: rgb(90, 90, 255);
+  --color-accent-1: rgb(90, 90, 255);
+  --color-accent-2: rgb(255, 90, 255);
+  --color-accent-3: rgb(90, 255, 255);
 
   /* --------- Typography --------- */
   --font-size-text-small: 2rem;
@@ -316,6 +318,16 @@ a {
 
 .card:hover {
   box-shadow: 6px 7px var(--color-black);
+}
+
+.card:nth-child(1) {
+  background: var(--color-accent-1);
+}
+.card:nth-child(2) {
+  background: var(--color-accent-2);
+}
+.card:nth-child(3) {
+  background: var(--color-accent-3);
 }
 
 @media screen and (max-width: 1024px) {

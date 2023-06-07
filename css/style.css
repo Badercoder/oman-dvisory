@@ -107,8 +107,12 @@ a {
   color: var(--color-black);
   font-weight: 600;
   padding: 0.25rem;
-  box-shadow: 4px 7px var(--color-black);
   border: 1px solid black;
+  transition: box-shadow 0.2s;
+}
+
+.nav:hover {
+  box-shadow: 3px 7px var(--color-black);
 }
 
 .nav .grid {
@@ -183,6 +187,7 @@ a {
 
   .nav {
     margin-right: 6rem;
+    box-shadow: 3px 7px var(--color-black);
   }
   .nav .list__item {
     width: auto;
@@ -285,14 +290,12 @@ a {
   height: fit-content;
   transition: all 0.15s;
   border: 2px solid var(--color-black);
-  font-weight: 600;
   box-shadow: 1px 1px var(--color-black);
   border-radius: 4px;
 }
 
 .page-title:hover {
-  box-shadow: 4px 5px var(--color-black);
-  font-weight: 400;
+  box-shadow: 3px 5px var(--color-black);
 }
 
 .cards {
@@ -339,6 +342,6 @@ a {
 
   .card {
     height: 25rem;
-    width: auto;
+    width: 25rem;
   }
 }

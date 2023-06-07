@@ -51,6 +51,14 @@ body {
   }
 }
 
+@media screen and (max-width: 550px) {
+
+  body {
+    padding-top: 7rem;
+    padding-inline: 1rem;
+  }
+}
+
 /* --------- Lists --------- */
 a {
   text-decoration: none;
@@ -195,6 +203,10 @@ a {
 
 @media screen and (max-width: 764px) {
 
+  .nav {
+    margin-right: 6rem;
+  }
+
   .nav .grid {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -240,6 +252,13 @@ a {
     border-radius: 4px 4px 3rem 3rem;
     margin-right: 0;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .nav {
+    margin-inline: 1rem;
   }
 }
 
@@ -316,9 +335,10 @@ a {
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 450px) {
 
   .card {
+    height: 25rem;
     width: auto;
   }
 }

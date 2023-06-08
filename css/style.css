@@ -143,16 +143,25 @@ a {
   margin-top: 0.75rem;
   border-radius: 3rem;
   background: var(--color-white);
-  color: var(--color-black);
   font-weight: 600;
   padding: 0.25rem;
   border: 1px solid black;
+  background: var(--color-gray-1);
   transition: box-shadow 0.2s;
   z-index: 1;
 }
 
+.nav a {
+  color: var(--color-white);
+}
+
 .nav:hover {
   box-shadow: 3px 7px var(--color-black);
+  background: var(--color-accent);
+}
+
+.list__item:hover a {
+  color: var(--color-white);
 }
 
 .nav .grid {
@@ -161,19 +170,25 @@ a {
   align-items: center;
 }
 
-.nav .list__item {
+.nav .list__item, .footer__nav .list__item {
   padding: 1.3rem 1.5rem;
   border-radius: 4px;
   transition: background 0.4s;
   width: 9rem;
   text-align: center;
+  border: 2px solid var(--color-gray-1);
 }
 
-.nav .list__item:hover {
+.nav:hover .list__item {
+  border: 2px solid var(--color-accent);
+}
+
+.nav .list__item:hover, .footer__nav .list__item:hover {
   font-weight: 600;
-  background: var(--color-accent);
+  background: var(--color-black);
   color: var(--color-white);
   cursor: pointer;
+  border: 2px solid var(--color-white);
 }
 
 .nav .list__item:nth-of-type(1) {
@@ -202,20 +217,12 @@ a {
   width: auto;
 }
 
-.nav a {
-  color: var(--color-black);
-}
-
-.list__item:hover a {
-  color: var(--color-white);
-}
-
 .nav svg {
   width: 21px;
   fill: #000;
 }
 
-.nav .icon {
+.nav .icon, .footer__nav .icon {
   fill: #fff;
   height: 40px;
   width: 45px;
@@ -269,7 +276,7 @@ a {
   .nav .list__item:nth-of-type(1) {
     border-radius: 3rem 4px 4px 3px;
     width: 30%;
-    padding-inline: 1rem 17%;
+    padding-inline: 1rem 14%;
     margin-bottom: 0.11rem;
   }
   
@@ -279,6 +286,7 @@ a {
   }
 
   .nav .list__item:nth-of-type(2) {
+    color: var(--color-white);
     display: block;
     width: fit-content;
     border-radius: 4px 3rem 3px 4px;
@@ -350,20 +358,21 @@ a {
 }
 
 .page-title {
+  padding: 0.75rem;
   text-align: center;
   border-bottom: 2px solid var(--color-black);
   margin-inline: 20rem;
   height: fit-content;
   transition: all 0.15s;
   border: 2px solid var(--color-black);
-  box-shadow: 1px 1px var(--color-black);
+  box-shadow: 1px 2px var(--color-black);
   border-radius: 4px;
 }
 
 .page-title:hover {
-  box-shadow: 3px 5px var(--color-black);
-  background: var(--color-accent);
-  color: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: 4px 7px var(--color-black);
+  color: var(--color-black);
 }
 
 .cards {
@@ -466,4 +475,106 @@ a {
     margin: 15% 0;
   }
 
+}
+
+/* --------- Footer --------- */
+.footer {
+  overflow: hidden;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-black);
+  border-radius: 2rem 2rem 4px 4px;
+  font-weight: 600;
+  padding: 0.25rem;
+  background: var(--color-gray-1);
+}
+
+.footer:hover {
+  background: var(--color-accent);
+}
+
+.footer:hover .list__item {
+  border: 1px solid var(--color-accent);
+}
+
+.footer__social-icons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
+  border-bottom: 1px dotted var(--color-white);
+}
+
+.footer__social-icons .bx {
+  vertical-align: baseline;
+  color: var(--color-white);
+}
+
+.footer__social-icons .list__item {
+  text-align: center;
+  padding: 1rem 3rem;
+  border: 1px solid var(--color-gray-1);
+  border-radius: 4px;
+}
+
+.footer__nav {
+  position: relative;
+}
+
+.footer__nav .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__nav .list__item {
+  padding: 1.8rem 1rem;
+  border: 1px solid var(--color-gray-1);
+}
+
+.footer__nav .list__item:hover, .footer__social-icons .list__item:hover {
+  background: var(--color-black);
+  border: 1px solid var(--color-white);
+}
+
+.footer__nav a {
+  color: var(--color-white);
+}
+
+.footer__nav .list__item:nth-child(1) {
+  position: absolute;
+  left: 1rem;
+  padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__nav .grid {
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__social-icons .list__item {
+    padding-inline: 1.5rem;
+  }
+
+  .footer__nav .list__item:not(:first-child) {
+    padding-inline: 8% 15%;
+    margin-inline: 30% 40%;
+    text-wrap:nowrap;
+    text-align: initial;
+  }
+
+  .footer__nav .list__item:nth-child(1) {
+    border: none;
+  }
+
+  .footer__nav .list__item:nth-child(1):hover {
+    border: none;
+    border: 1px solid var(--color-white);
+  }
 }

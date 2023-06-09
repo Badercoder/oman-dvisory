@@ -78,7 +78,26 @@
     </section>
 
                                 <!-------- Footer -------->
-    <footer class="footer">
+    <footer class="footer hide-footer" id="footerList">
+        
+        <nav class="footer__nav" id="footerIcon">
+            <ul class="list grid">
+                <li class="list__item">
+                    <a href="/">
+                        <svg class="icon">
+                            <use xlink:href="images/svgIcons.svg#cube"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="list__item"><i class='bx bx-menu'></i></li>
+                <li class="list__item"><a href="#">Blogs</a></li>
+                <li class="list__item">
+                    <a href="/">Home Page</a>
+                </li>
+                <li class="list__item"><a href="#">Subscribe</a></li>
+                <li class="list__item"><a href="#">About me</a></li>
+            </ul>
+        </nav>
 
         <ul class="footer__social-icons list">
             <li class="list__item">
@@ -94,28 +113,10 @@
                 <a href="#"><i class='bx bxl-youtube' ></i></a>
             </li>
         </ul>
-
-        <nav class="footer__nav">
-            <ul class="list grid hide-footer" id="footerList">
-                <li class="list__item">
-                    <a href="/">
-                        <svg class="icon">
-                            <use xlink:href="images/svgIcons.svg#cube"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="list__item" id="footerIcon"><i class='bx bx-menu'></i></li>
-                <li class="list__item"><a href="#">Blogs</a></li>
-                <li class="list__item">
-                    <a href="/">Home Page</a>
-                </li>
-                <li class="list__item"><a href="#">Subscribe</a></li>
-                <li class="list__item"><a href="#">About me</a></li>
-            </ul>
-        </nav>
+        
     </footer>
 
-<script src="navApp.js"></script>
+<!-- <script src="navApp.js"></script> -->
 <script src="footerApp.js"></script>
 </body>
 </html>

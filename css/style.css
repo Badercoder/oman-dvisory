@@ -239,6 +239,14 @@ a {
 @media screen and (max-width: 780px) {
 
   .nav {
+    display: none;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  /* .nav {
     margin-right: 6rem;
   }
 
@@ -260,10 +268,10 @@ a {
     width: 30%;
     padding-inline: 1rem 14%;
     margin-bottom: 0.11rem;
-  }
+  } */
   
   /* padding changes when the menu is closed  */
-  .hide .list__item:nth-of-type(1) {
+  /* .hide .list__item:nth-of-type(1) {
     border-radius: 3rem 4px 4px 3rem;
   }
 
@@ -281,9 +289,9 @@ a {
   .nav .list__item:nth-of-type(2):hover {
     color: var(--color-white);
   }
-
+ */
   /* padding changes when the menu is closed  */
-  .hide .list__item:nth-of-type(2) {
+  /* .hide .list__item:nth-of-type(2) {
     border-radius: 4px 3rem 3rem 4px;
   }
 
@@ -297,7 +305,7 @@ a {
     margin-right: 0;
     margin-left: 0;
     flex-grow: 1;
-  }
+  } */
 }
 
 @media screen and (max-width: 675px) {
@@ -460,7 +468,7 @@ a {
   }
 
   .card__body {
-    margin: 15% 0;
+    margin: 17% 0;
   }
 
 }
@@ -515,6 +523,7 @@ a {
 
   /* Footer Nav */
 .footer__nav {
+  order: 2;
   display: flex;
   justify-content: space-evenly;
 }
@@ -542,26 +551,29 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 780px) {
   
   /* Footer */
+  .footer {
+    margin-inline: 0 6rem;
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;  
+  }
+
   .footer .list__item {
     width: 100%;
   }
-  
-  /* Footer Social Icons */
-  .footer__social-icons .list__item:first-child {
-    border-radius: 2rem 4px 4px 4px;
-  }
 
-  .footer__social-icons .list__item:last-child {
-    border-radius: 4px 2rem 4px 4px;  
+  .hide-footer .list__item {
+    display: none;
   }
 
   /* Footer Nav */
   .footer__nav .grid {
     flex-direction: column;
   }
+
   .footer__nav {
     display: block;
   }
@@ -583,11 +595,22 @@ a {
   .footer__nav .list__item:nth-of-type(2) {
     display: block;
     order: -1;
+    border-radius: 2rem 2rem 4px 4px;
     color: var(--color-white);
+    padding: 1rem 0;
+    cursor: pointer;
   }
+    
+  /* Footer Social Icons */
+  .footer__social-icons {
+    order: 2;
+    border-top: 1px dotted var(--color-white);
+  }
+}
 
-  .hide-footer .list__item:not(:nth-child(2)) {
-    display: none;
+@media screen and (max-width: 675px) {
+
+  .footer {
+    margin-inline: 0 1rem;
   }
-  
 }

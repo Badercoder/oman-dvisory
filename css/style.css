@@ -54,7 +54,6 @@ body {
 @media screen and (max-width: 675px) {
 
   body {
-    padding-top: 6rem;
     padding-inline: 1rem;
   }
 }
@@ -117,19 +116,6 @@ a {
 }
 
 /* --------- Layouts --------- */
-
-@media screen and (max-width: 1024px) {
-  .section {
-    margin-inline: 4rem;
-  }
-}
-
-@media screen and (max-width: 725px) {
-  .section {
-    margin-inline: 1rem;
-  }
-}
-
 .grid {
   display: grid;
 }
@@ -146,18 +132,13 @@ a {
   font-weight: 600;
   padding: 0.25rem;
   border: 1px solid black;
-  background: var(--color-gray-1);
+  box-shadow: 3px 7px var(--color-black);
   transition: box-shadow 0.2s;
   z-index: 1;
 }
 
 .nav a {
-  color: var(--color-white);
-}
-
-.nav:hover {
-  box-shadow: 3px 7px var(--color-black);
-  background: var(--color-accent);
+  color: var(--color-black);
 }
 
 .list__item:hover a {
@@ -176,18 +157,13 @@ a {
   transition: background 0.4s;
   width: 9rem;
   text-align: center;
-  border: 2px solid var(--color-gray-1);
-}
-
-.nav:hover .list__item {
-  border: 2px solid var(--color-accent);
+  border: 2px solid var(--color-white);
 }
 
 .nav .list__item:hover, .footer__nav .list__item:hover {
   font-weight: 600;
   background: var(--color-black);
   color: var(--color-white);
-  cursor: pointer;
   border: 2px solid var(--color-white);
 }
 
@@ -234,7 +210,6 @@ a {
 
   .nav {
     margin-right: 6rem;
-    box-shadow: 3px 7px var(--color-black);
   }
 
   .nav .list__item {
@@ -286,7 +261,7 @@ a {
   }
 
   .nav .list__item:nth-of-type(2) {
-    color: var(--color-white);
+    color: var(--color-black);
     display: block;
     width: fit-content;
     border-radius: 4px 3rem 3px 4px;
@@ -296,6 +271,10 @@ a {
     margin-bottom: 0.11rem;
   }
   
+  .nav .list__item:nth-of-type(2):hover {
+    color: var(--color-white);
+  }
+
   /* padding changes when the menu is closed  */
   .hide .list__item:nth-of-type(2) {
     border-radius: 4px 3rem 3rem 4px;
@@ -345,6 +324,7 @@ a {
 .blogs-section {
   margin: 1.5rem 0;
 }
+
 .blogs-section .grid {
   grid-gap: 1rem;
 }
@@ -364,15 +344,14 @@ a {
   margin-inline: 20rem;
   height: fit-content;
   transition: all 0.15s;
-  border: 2px solid var(--color-black);
+  border: 1px solid var(--color-black);
   box-shadow: 1px 2px var(--color-black);
   border-radius: 4px;
 }
 
 .page-title:hover {
-  border: 2px solid var(--color-black);
   box-shadow: 4px 7px var(--color-black);
-  color: var(--color-black);
+  color: var(--color-accent);
 }
 
 .cards {
@@ -514,13 +493,19 @@ a {
 
 .footer__social-icons .list__item {
   text-align: center;
-  padding: 1rem 3rem;
+  padding: 1rem 3rem 0.5rem;
   border: 1px solid var(--color-gray-1);
   border-radius: 4px;
 }
 
+.footer .list__item:hover {
+  border: 1px solid var(--color-white);
+  background: var(--color-black);
+}
+
 .footer__nav {
-  position: relative;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .footer__nav .grid {
@@ -534,43 +519,46 @@ a {
   border: 1px solid var(--color-gray-1);
 }
 
-.footer__nav .list__item:hover, .footer__social-icons .list__item:hover {
-  background: var(--color-black);
-  border: 1px solid var(--color-white);
-}
-
 .footer__nav a {
   color: var(--color-white);
 }
 
 .footer__nav .list__item:nth-child(1) {
-  position: absolute;
-  left: 1rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (max-width: 1024px) {
+  
+  /* Footer */
+  .footer .list__item {
+    width: 100%;
+  }
+  
+  /* Footer Social Icons */
+  .footer__social-icons .list__item:first-child {
+    border-radius: 2rem 4px 4px 4px;
+  }
+
+  .footer__social-icons .list__item:last-child {
+    border-radius: 4px 2rem 4px 4px;  
+  }
+
+  /* Footer Nav */
   .footer__nav .grid {
-    display: flex;
-    justify-content: center;
-    align-items: initial;
     flex-direction: column;
-    text-align: center;
+  }
+  .footer__nav {
+    display: block;
   }
 
-  .footer__social-icons .list__item {
-    padding-inline: 1.5rem;
+  .footer__nav .list__item {
+    padding-inline: 0;
+    border: 1px solid var(--color-gray-1);
+    margin-inline: auto;
   }
 
-  .footer__nav .list__item:not(:first-child) {
-    padding-inline: 8% 15%;
-    margin-inline: 30% 40%;
-    text-wrap:nowrap;
-    text-align: initial;
-  }
-
-  .footer__nav .list__item:nth-child(1) {
-    border: none;
+  .footer__nav .list__item:first-child {
+    padding-inline: 0;
   }
 
   .footer__nav .list__item:nth-child(1):hover {

@@ -39,7 +39,7 @@ body {
   font-family: monospace;
   font-size: var(--font-size-text-medium);
   background: var(--color-gray-2);
-  padding-top: 6rem;
+  padding-top: 6.5rem;
   padding-inline: 10rem;
 }
 
@@ -118,6 +118,13 @@ a {
 /* --------- Layouts --------- */
 .grid {
   display: grid;
+}
+.container {
+  padding: 2rem;
+  width: auto;
+  border-radius: 3rem;
+  background: white;
+  border: 1px solid var(--color-black);
 }
 
 /* --------- Navigation Bar --------- */
@@ -329,19 +336,15 @@ a {
   grid-gap: 1rem;
 }
 
-.container {
-  height: 62rem;
-  width: auto;
-  border-radius: 3rem;
-  background: white;
-  border: 1px solid var(--color-black);
+.blogs-section h1 {
+  margin: 0;
+  margin-inline: 20%;
 }
 
 .page-title {
   padding: 0.75rem;
   text-align: center;
   border-bottom: 2px solid var(--color-black);
-  margin-inline: 20rem;
   height: fit-content;
   transition: all 0.15s;
   border: 1px solid var(--color-black);
@@ -415,6 +418,11 @@ a {
 
 @media screen and (max-width: 1024px) {
 
+  .blogs-section h1 {
+    margin: 0;
+    margin-inline: 6%;
+  }
+  
   .cards {
     display: block;
   }
@@ -442,6 +450,7 @@ a {
     margin-inline: 1rem;
   }
 }
+
 
 @media screen and (max-width: 450px) {
 
@@ -477,6 +486,7 @@ a {
   border: 1px solid var(--color-accent);
 }
 
+  /* Footer Social Icons */
 .footer__social-icons {
   display: flex;
   justify-content: center;
@@ -503,6 +513,7 @@ a {
   background: var(--color-black);
 }
 
+  /* Footer Nav */
 .footer__nav {
   display: flex;
   justify-content: space-evenly;
@@ -525,6 +536,10 @@ a {
 
 .footer__nav .list__item:nth-child(1) {
   padding: 0.5rem 1rem;
+}
+
+.footer__nav .list__item:nth-of-type(2) {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -562,7 +577,17 @@ a {
   }
 
   .footer__nav .list__item:nth-child(1):hover {
-    border: none;
     border: 1px solid var(--color-white);
   }
+
+  .footer__nav .list__item:nth-of-type(2) {
+    display: block;
+    order: -1;
+    color: var(--color-white);
+  }
+
+  .hide-footer .list__item:not(:nth-child(2)) {
+    display: none;
+  }
+  
 }

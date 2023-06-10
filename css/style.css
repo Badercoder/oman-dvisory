@@ -556,12 +556,13 @@ a {
 
 @media screen and (max-width: 1024px) {
   .footer {
-    margin-right: 6rem;
+    margin-right: 0;
+    position: relative;
   }
 }
 
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1024px) {
 
   .footer .list__item {
     width: 100%;

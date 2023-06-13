@@ -15,7 +15,7 @@
   --font-size-heading-small: 3rem;
 }
 ::selection {
-  background: var(--color-purple);
+  background: var(--color-black);
   color: var(--color-white);
 }
 
@@ -398,11 +398,22 @@ a {
 }
 
 .card__body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
   padding-bottom: 100%;
-  padding-inline: 1rem;
-  text-align: center;
-  margin: 38% 0;
-  font-size: 4rem;
+  padding: 0.25rem;
+  width: auto;
+  height: -webkit-fill-available;
+}
+
+.card__body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 81.5%;
+  border-radius: 8px 8px 0 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -426,9 +437,6 @@ a {
     align-items: unset;
   }
 
-  .card__body {
-    margin: 25% 0;
-  }
   .container {
     height: auto;
     padding: 2rem;
@@ -448,6 +456,9 @@ a {
     margin: 17% 0;
   }
 
+  .card__body img {
+    height: 81.5%;
+  }
 }
 
 /* --------- Footer --------- */
@@ -656,17 +667,19 @@ a {
   height: fit-content;
   transition: all 0.15s;
   border: 1px solid var(--color-black);
-  box-shadow: 1px 2px var(--color-black);
+  box-shadow: 4px 7px var(--color-black);
   border-radius: 4px;
+  margin-inline: 20rem;
 }
 
 .page-title:hover {
-  box-shadow: 4px 7px var(--color-black);
-  color: var(--color-accent);
+  box-shadow: 1px 1px var(--color-black);
 }
 
-h1, .page-title p {
-  display: inline-block;
+@media screen and (max-width: 1260px) {
+  .page-title {
+    margin-inline: 0;
+  }
 }
 
 h1 {
@@ -685,15 +698,25 @@ h1 {
   border-radius: 2rem 0 0 2rem;
 }
 
-.author-info {
+.author {
   background: cadetblue;
   border-radius: 0 2rem 2rem 0;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
 }
 
-@media screen and (max-width: 950px) {
+.author-info {
+  border-bottom: 1px solid var(--color-white);
+}
+
+@media screen and (max-width: 980px) {
   .blog {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
+  }
+
+  .page-title {
+    margin-inline: 0;
   }
 
   h1, .page-title p {
@@ -708,8 +731,14 @@ h1 {
     border-radius: 2rem 2rem 0 0;
   }
   
-  .author-info {
+  .author {
     border-radius: 0 0 2rem 2rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+  }
+  
+  .author-info {
+    border-right: 1px solid var(--color-white);
   }
   
 }

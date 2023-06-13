@@ -39,14 +39,13 @@ body {
   font-family: monospace;
   font-size: var(--font-size-text-medium);
   background: var(--color-gray-2);
-  padding-top: 6.5rem;
   padding-inline: 10rem;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
 
   body {
-    padding-top: 7rem;
     padding-inline: 6rem;
   }
 }
@@ -120,8 +119,8 @@ a {
   display: grid;
 }
 .container {
-  margin-top: 1rem;
-  padding: 2rem;
+  margin-top: 2rem;
+  padding: 2rem 2rem 0 2rem;
   width: auto;
   border-radius: 3rem;
   background: white;
@@ -130,11 +129,9 @@ a {
 
 /* --------- Navigation Bar --------- */
 .nav {
-  position: fixed;
-  top: 0;
+  position: sticky;
+  top: 0.5rem;
   width: -webkit-fill-available;
-  margin-right: 10rem;
-  margin-top: 0.75rem;
   border-radius: 3rem;
   background: var(--color-white);
   font-weight: 600;
@@ -224,10 +221,6 @@ a {
 
 @media screen and (max-width: 1024px) {
 
-  .nav {
-    margin-right: 6rem;
-  }
-
   .nav .list__item {
     width: auto;
   }
@@ -246,10 +239,6 @@ a {
 }
 
 @media screen and (max-width: 780px) {
-
-  .nav {
-    margin-right: 6rem;
-  }
 
   .nav .grid {
     flex-wrap: wrap;
@@ -353,9 +342,11 @@ a {
 .cards {
   display: flex;
   justify-content: center;
+  margin: 4rem;
 }
 
 .card {
+  padding: 1px;
   position: relative;
   overflow: hidden;
   margin-inline: 2rem;
@@ -365,17 +356,21 @@ a {
   border: 2px solid var(--color-black);
   border-radius: 1rem;
   transition: all 0.2s;
+  box-shadow: 5px 7px var(--color-black);
 }
 
 .card:hover {
-  box-shadow: 5px 7px var(--color-black);
+  box-shadow: 1px 1px var(--color-black);
 }
 
 .card__header {
   display: flex;
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  bottom: 1px;
+  right: 3.5px;
+  width: 98.05%;
+  margin-inline: auto;
+  border-radius: 0 0 8px 8px;
   background: var(--color-gray-1);
   color: var(--color-white);
   transition: all 0.2s;
@@ -460,18 +455,14 @@ a {
 @media screen and (max-width: 450px) {
 
   .card {
-    height: 51vh;
+    height: 52vh;
     width: 80vw;
   }
-
-  .card__body
 }
 
 /* --------- Footer --------- */
 .footer {
-  position: absolute;
-  bottom: 0;
-  margin-right: 10rem;
+  margin-top: 1rem;
   background: var(--color-gray-1);
   border-radius: 2rem 2rem 4px 4px;
   border: 1px solid var(--color-black);
@@ -549,14 +540,15 @@ a {
   display: none;
 }
 
-
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1260px) {
   .footer {
     position: relative;
-    margin-inline: 0;
+    margin-right: 0;
     margin-top: 1rem;
   }
+}
+
+@media screen and (max-width: 1024px) {
 
   .footer .list__item {
     width: 100%;
@@ -661,10 +653,10 @@ a {
 
 /* --------- Blogs page --------- */
 .blog {
-  margin-top: 2rem;
+  margin: 3.5rem 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  height: 41.5rem;
+  gap: 1rem;
 }
 
 .page-title {
@@ -694,8 +686,7 @@ a {
 
 .author-info {
   color: var(--color-gray-1);
-  border-bottom: 1px solid var(--color-gray-1);
-  background: blanchedalmond;
+  background: var(--color-gray-2);
 }
 
 .author-info i {
@@ -731,17 +722,44 @@ h1 {
 }
 
 .blog-section {
-  background: aquamarine;
   border-radius: 2rem 0 0 2rem;
+  padding: 1rem;
+  background: var(--color-gray-2);
 }
 
 .author {
   border-radius: 0 2rem 2rem 0;
   display: grid;
   grid-template-rows: 4fr 1fr;
+  gap: 1rem;
 }
 
-@media screen and (max-width: 1260px) {
+.social-sharing {
+  background: var(--color-gray-2);
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social-sharing p {
+  padding: 0;
+  display: inline;
+  margin-right: 1rem;
+}
+
+.social-sharing ul {
+  display: inline;
+  vertical-align: middle;
+}
+
+.social-sharing .list--flex li {
+  margin-left: 0;
+  margin-inline: 1rem;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 1300px) {
   .page-title {
     margin-inline: 0;
   }
@@ -755,6 +773,13 @@ h1 {
     margin-left: 1rem;
   }
 
+  .social-sharing p, .social-sharing ul {
+    display: block;
+  }
+  
+  .social-sharing .list__item {
+    margin-inline: 2rem;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -788,4 +813,14 @@ h1 {
   .author-info {
     border-right: 1px solid var(--color-white);
   } 
+}
+
+@media screen and (max-width: 780px) {
+
+  .author {
+    border-radius: 0 0 2rem 2rem;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
 }

@@ -306,7 +306,7 @@ a {
 
   body {
     padding-top: 0;
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
   }
 
   /* .nav .list__item {
@@ -366,7 +366,7 @@ a {
 .card__header {
   display: flex;
   position: absolute;
-  bottom: 1px;
+  bottom: 3px;
   right: 3.5px;
   width: 98.05%;
   margin-inline: auto;
@@ -454,9 +454,18 @@ a {
 
 @media screen and (max-width: 450px) {
 
+  .cards {
+    margin: 0;
+  }
+
   .card {
     height: 52vh;
     width: 80vw;
+    margin: 3rem auto;
+  }
+
+  .card:last-child {
+    margin-bottom: 1rem;
   }
 }
 

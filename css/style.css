@@ -145,6 +145,10 @@ a {
   z-index: 1;
 }
 
+.nav:hover {
+  box-shadow: 1px 1px var(--color-black);
+}
+
 .nav a {
   color: var(--color-black);
 }
@@ -355,7 +359,7 @@ a {
   position: relative;
   overflow: hidden;
   margin-inline: 2rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
   height: 35rem;
   width: 35rem;
   border: 2px solid var(--color-black);
@@ -400,20 +404,34 @@ a {
 .card__body {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  padding-bottom: 100%;
   padding: 0.25rem;
   width: auto;
   height: -webkit-fill-available;
 }
 
 .card__body img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
   height: 81.5%;
   border-radius: 8px 8px 0 0;
+}
+
+@media screen and (max-width: 1350px) {
+
+  .card {
+    height: 37.2vh;
+  }
+
+  .card__body {
+    height: unset;
+  }
+
+  .card__header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: unset;
+  }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -428,15 +446,9 @@ a {
 
   .card {
     margin-inline: auto;
+    height: 53.5vh;
   }
   
-  .card__header {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: unset;
-  }
-
   .container {
     height: auto;
     padding: 2rem;
@@ -448,33 +460,27 @@ a {
 @media screen and (max-width: 450px) {
 
   .card {
-    height: 45vh;
+    height: 51vh;
     width: 80vw;
   }
 
-  .card__body {
-    margin: 17% 0;
-  }
-
-  .card__body img {
-    height: 81.5%;
-  }
+  .card__body
 }
 
 /* --------- Footer --------- */
 .footer {
   position: absolute;
   bottom: 0;
-  width: -webkit-fill-available;  
-  overflow: hidden;
   margin-right: 10rem;
+  background: var(--color-gray-1);
+  border-radius: 2rem 2rem 4px 4px;
+  border: 1px solid var(--color-black);
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-black);
-  border-radius: 2rem 2rem 4px 4px;
   font-weight: 600;
+  overflow: hidden;
   padding: 0.25rem;
-  background: var(--color-gray-1);
+  width: -webkit-fill-available;  
 }
 
 .footer:hover {
@@ -547,7 +553,9 @@ a {
 @media screen and (max-width: 1024px) {
 
   .footer {
-    margin-right: 6rem;
+    position: relative;
+    margin-inline: 0;
+    margin-top: 1rem;
   }
 
   .footer .list__item {
@@ -676,10 +684,39 @@ a {
   box-shadow: 1px 1px var(--color-black);
 }
 
-@media screen and (max-width: 1260px) {
-  .page-title {
-    margin-inline: 0;
-  }
+.author-heading {
+  color: var(--color-gray-1);
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  text-decoration: underline;
+}
+
+.author-info {
+  color: var(--color-gray-1);
+  border-bottom: 1px solid var(--color-gray-1);
+  background: blanchedalmond;
+}
+
+.author-info i {
+  font-size: 8rem;
+  display: inline;
+  color: var(--color-accent);
+}
+
+.author-info ul {
+  position: relative;
+  top: -1rem;
+  display: inline-block;
+}
+
+.author-info span {
+  color: var(--color-accent);
+}
+
+.author-info p {
+  margin: 1rem;
+  color: var(--color-accent);
 }
 
 h1 {
@@ -699,14 +736,25 @@ h1 {
 }
 
 .author {
-  background: cadetblue;
   border-radius: 0 2rem 2rem 0;
   display: grid;
   grid-template-rows: 4fr 1fr;
 }
 
-.author-info {
-  border-bottom: 1px solid var(--color-white);
+@media screen and (max-width: 1260px) {
+  .page-title {
+    margin-inline: 0;
+  }
+
+  .author-info i {
+    margin-left: 3rem;
+  }
+  
+  .author-info ul {
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+  }
+
 }
 
 @media screen and (max-width: 980px) {
@@ -739,6 +787,5 @@ h1 {
   
   .author-info {
     border-right: 1px solid var(--color-white);
-  }
-  
+  } 
 }

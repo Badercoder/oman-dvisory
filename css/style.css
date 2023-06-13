@@ -442,8 +442,13 @@ a {
   .card {
     margin-inline: auto;
     height: 53.5vh;
+    margin: 3rem auto;
   }
   
+  .card:last-child {
+    margin-bottom: 1rem;
+  }
+
   .container {
     height: auto;
     padding: 2rem;
@@ -459,14 +464,10 @@ a {
   }
 
   .card {
-    height: 52vh;
+    height: 52.5vh;
     width: 80vw;
-    margin: 3rem auto;
   }
 
-  .card:last-child {
-    margin-bottom: 1rem;
-  }
 }
 
 /* --------- Footer --------- */

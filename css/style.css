@@ -906,7 +906,7 @@ h1 {
 
   .author {
     border-radius: 0 0 2rem 2rem;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 3fr 0.75fr;
     grid-template-columns: 1fr;
   }
 

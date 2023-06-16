@@ -10,7 +10,6 @@
 .pagination {
   display: flex;
   justify-content: space-between;
-  margin-inline: 20rem;
   margin-bottom: 2rem;
 }
 
@@ -331,7 +330,7 @@ figcaption:hover {
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1024px) {
   .blog {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;

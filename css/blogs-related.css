@@ -3,6 +3,10 @@
   grid-gap: 1rem;
 }
 
+.pagination:first-of-type {
+  margin-top: 2rem;
+}
+
 .pagination {
   display: flex;
   justify-content: space-between;

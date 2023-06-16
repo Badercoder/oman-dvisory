@@ -162,7 +162,7 @@
 
 /* ----------------------------------- Blogs page ----------------------------------- */
 .blog {
-  margin: 1.5rem 0 0;
+  margin: 1.5rem 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
@@ -402,6 +402,9 @@ figcaption:hover {
 
 @media screen and (max-width: 501px) {
 
+  .blog {
+    margin-bottom: 0;
+  }
   .image-container {
     height: 15rem;
   }

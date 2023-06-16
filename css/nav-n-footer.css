@@ -209,7 +209,7 @@
 .footer {
     margin-top: auto;
     background: var(--color-gray-1);
-    border-radius: 2rem 2rem 4px 4px;
+    border-radius: 1rem 1rem 4px 4px;
     border: 1px solid var(--color-black);
     display: flex;
     flex-direction: column;
@@ -307,11 +307,11 @@
     }
   
     .footer__social-icons .list__item:first-child {
-      border-radius: 2rem 4px 4px 4px;
+      border-radius: 1rem 4px 4px 4px;
     }
   
     .footer__social-icons .list__item:last-child {
-      border-radius: 4px 2rem 4px 4px;
+      border-radius: 4px 1rem 4px 4px;
     }
   
     .footer__nav .grid {
@@ -346,7 +346,7 @@
     .hide-footer .footer__nav .list__item:nth-of-type(2) {
       display: block;
       order: -1;
-      border-radius: 2rem 2rem 4px 4px;
+      border-radius: 1rem 1rem 4px 4px;
       color: var(--color-white);
       padding: 1rem 0;
       cursor: pointer;
@@ -387,7 +387,7 @@
     }
     
     .footer__nav .list__item:first-child {
-      border-radius: 2rem 2rem 4px 4px;
+      border-radius: 1rem 1rem 4px 4px;
       padding-inline: 0;
     }
   }

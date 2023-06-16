@@ -205,6 +205,7 @@
   color: var(--color-gray-1);
   background: var(--color-gray-2);
   padding: 1rem 2rem;
+  border-radius: 0 1rem 0 0;
 }
 
 .author-info i {
@@ -238,13 +239,6 @@
   color: var(--color-accent);
 }
 
-@media screen and (max-width: 1491px) {
-  .author-info p {
-    margin-top: 0;
-  }
-    
-}
-
 .page-title p {
   position: absolute;
   margin: 0;
@@ -253,7 +247,7 @@
 }
 
 .blog-section {
-  border-radius: 2rem 0 0 2rem;
+  border-radius: 1rem 0 0 1rem;
   padding: 2rem 2rem 1rem;
   background: var(--color-gray-2);
 }
@@ -287,7 +281,7 @@ figcaption:hover {
 }
 
 .author {
-  border-radius: 0 2rem 2rem 0;
+  border-radius: 0 1rem 1rem 0;
   display: grid;
   grid-template-rows: 4fr 1fr;
   gap: 1rem;
@@ -299,6 +293,7 @@ figcaption:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  border-radius: 0 0 1rem 0;
 }
 
 .social-sharing p {
@@ -319,7 +314,7 @@ figcaption:hover {
 }
 
 @media screen and (max-width: 1300px) {
-  .page-title, .pagination {
+  .page-title {
     margin-inline: 0;
   }
 
@@ -355,17 +350,17 @@ figcaption:hover {
   }
    
   .blog-section {
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 1rem 1rem 0 0;
   }
   
   .author {
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 0 0 1rem 1rem;
     grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr;
   }
   
   .author-info {
-    border-right: 1px solid var(--color-white);
+    border-radius: 0 0 0 1rem;
   }
 
   .author-info p {
@@ -397,13 +392,21 @@ figcaption:hover {
   }
 
   .author {
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 0 0 1rem 1rem;
     grid-template-rows: 3fr 0.85fr;
     grid-template-columns: 1fr;
   }
 
+  .author-info {
+    border-radius: 0;
+  }
+
   .author-info p {
     margin-top: 2rem;
+  }
+
+  .social-sharing {
+    border-radius: 0 0 1rem 1rem;
   }
 
 }
@@ -419,10 +422,13 @@ figcaption:hover {
 
   .social-sharing {
     display: block;
+    text-align: center;
   }
 
   .social-sharing p {
     display: block;
+    margin-right: 0;
+    margin-top: 0;
   }
 
   .social-sharing ul {

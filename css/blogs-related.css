@@ -6,8 +6,8 @@
 .pagination {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
   margin-inline: 20rem;
+  margin-bottom: 2rem;
 }
 
 .pagination:last-child {
@@ -158,7 +158,7 @@
 
 /* ----------------------------------- Blogs page ----------------------------------- */
 .blog {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;

@@ -22,7 +22,15 @@
   background: var(--color-gray-2);
   color: var(--color-gray-1);
   border-radius: 2rem;
-  padding-inline: 1rem;
+  padding: 0.25rem 1.5rem;
+  border: 1px solid var(--color-gray-2);
+  transition: all 0.2s;
+}
+
+.pagination a:hover {
+  background: var(--color-gray-1);
+  color: var(--color-white);
+  border: 1px solid var(--color-gray-1);
 }
 
 .cards {
@@ -246,7 +254,7 @@
 
 .blog-section {
   border-radius: 2rem 0 0 2rem;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem 1rem;
   background: var(--color-gray-2);
 }
 
